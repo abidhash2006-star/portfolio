@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A. Abidhash — Portfolio</title>
+  <meta name="description" content="Portfolio of A. Abidhash — software developer, open-source enthusiast." />
+  <style>
+    :root{
+      --bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;
+      --accent1:#7c3aed;--accent2:#06b6d4;
+      --shine:rgba(255,255,255,0.15);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Poppins,Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;
+      min-height:100vh;
+      background:radial-gradient(circle at 10% 10%, rgba(124,58,237,0.12), transparent 8%),
+        radial-gradient(circle at 90% 90%, rgba(6,182,212,0.08), transparent 10%),
+        linear-gradient(180deg,var(--bg),#020617);
+      color:#e6eef6;padding:32px;overflow-x:hidden;
+    }
+    .container{max-width:980px;margin:0 auto;position:relative;animation:fadeIn 1.5s ease}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;animation:slideDown 1s ease}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{
+      width:84px;height:84px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:28px;color:white;
+      box-shadow:0 6px 20px rgba(3,7,18,0.6);
+      animation:glow 4s ease-in-out infinite, floaty 6s ease-in-out infinite;
+    }
+    h1{font-size:22px;animation:textGlow 2s ease-in-out infinite alternate}
+    p.lead{color:var(--muted);margin-top:6px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px;transition:0.3s}
+    nav a:hover{color:var(--accent2)}
+    main{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;padding:18px;
+      box-shadow:0 0 20px rgba(255,255,255,0.03),0 0 8px rgba(124,58,237,0.06);
+      transition:transform .3s, box-shadow .3s;
+    }
+    .card:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(6,182,212,0.15)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{background:rgba(255,255,255,0.05);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted);transition:.3s}
+    .chip:hover{background:var(--accent2);color:white;transform:scale(1.08)}
+    .projects .proj{margin-top:14px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));position:relative;overflow:hidden}
+    .proj::before{
+      content:'';position:absolute;top:0;left:-50%;width:50%;height:100%;background:linear-gradient(120deg, transparent, var(--shine), transparent);
+      animation:shine 3s infinite;
+    }
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;text-decoration:none;transition:0.3s}
+    .cta:hover{filter:brightness(1.2);transform:scale(1.05)}
+    footer{text-align:center;color:var(--muted);font-size:13px;margin-top:28px;animation:fadeUp 2s ease}
+
+    /* Animations */
+    @keyframes glow{0%{filter:drop-shadow(0 0 4px rgba(124,58,237,0.2))}50%{filter:drop-shadow(0 0 14px rgba(6,182,212,0.4))}100%{filter:drop-shadow(0 0 4px rgba(124,58,237,0.2))}}
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    @keyframes shine{0%{left:-50%}100%{left:150%}}
+    @keyframes textGlow{0%{text-shadow:0 0 3px var(--accent1)}100%{text-shadow:0 0 12px var(--accent2)}}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @media (max-width:900px){main{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">AA</div>
+        <div>
+          <h1>A. Abidhash</h1>
+          <p class="lead">Aspiring software developer · Open-source contributor · Student</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div id="about" class="card">
+          <h2>About</h2>
+          <p class="small" style="margin-top:8px">Hey there — I'm <strong>A. Abidhash</strong>! I love building clean, responsive web apps and experimenting with creative designs. Currently exploring open-source and interactive UI animation.</p>
+          <div style="margin-top:14px">
+            <strong>Skills</strong>
+            <div class="skills">
+              <div class="chip">HTML</div>
+              <div class="chip">CSS</div>
+              <div class="chip">JavaScript</div>
+              <div class="chip">Node.js</div>
+              <div class="chip">Git</div>
+              <div class="chip">Linux</div>
+            </div>
+          </div>
+
+          <div id="projects" class="projects" style="margin-top:18px">
+            <strong>Animated Showcase Projects</strong>
+            <div class="proj">
+              <h3>✨ TaskVerse — Animated Task Manager</h3>
+              <p class="small">An animated to-do dashboard with floating cards, neon highlights, and progress tracking animations. Demonstrates JS event handling and CSS transitions.</p>
+              <div style="margin-top:8px"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+              <a class="cta" href="#">View Demo</a>
+            </div>
+
+            <div class="proj">
+              <h3>🌸 DreamUI — Aesthetic Components Library</h3>
+              <p class="small">A fake but aesthetic library concept showing glassmorphism buttons, gradients, and glowing animations built with pure CSS for portfolio visual showcase.</p>
+              <div style="margin-top:8px"><span class="chip">CSS</span><span class="chip">Design</span><span class="chip">Frontend</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="small">Let's connect:</p>
+          <p class="small">📧 <a href="mailto:abidhash2006@gmail.com">abidhash2006@gmail.com</a></p>
+          <p class="small">🔗 <a href="https://www.linkedin.com/in/abidhash-abi-8a0800395">LinkedIn</a></p>
+          <p class="small">💻 <a href="https://github.com/abidhash2006-star">GitHub</a></p>
+          <a class="cta" href="mailto:abidhash2006@gmail.com">Say Hi</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="small">© 2025 A. Abidhash — Animated portfolio sample by Shri Raksha ✨</div>
+    </footer>
+  </div>
+</body>
+</html>
